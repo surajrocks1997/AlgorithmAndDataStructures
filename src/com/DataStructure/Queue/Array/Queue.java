@@ -1,4 +1,4 @@
-package com.DataStructure.Queue;
+package com.DataStructure.Queue.Array;
 
 public class Queue {
 
