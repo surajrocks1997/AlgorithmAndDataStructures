@@ -3,7 +3,7 @@ package com.DataStructure.Queue;
 public class Queue1 {
 
 	public static void main(String[] args) {
-	sample queue = new sample(5);
+	sample queue = new sample(1000);
 	queue.enqueue(1);
 	queue.enqueue(2);
 	queue.enqueue(3);
@@ -13,7 +13,11 @@ public class Queue1 {
 	
 	queue.dequeue();
 	queue.dequeue();
-	queue.dequeue();
+//	queue.dequeue();
+//	queue.dequeue();
+//	queue.dequeue();
+//	queue.dequeue();
+	
 	
 	queue.show();
 	
@@ -74,24 +78,33 @@ class sample{
 	}
 	
 	public void front() {
-		System.out.println("Front: " + arr[front]);
+		if(!isEmpty()) {
+			System.out.println("Front: " + arr[front]);
+		}
+		else {
+			System.out.println("Queue Empty so no front");
+		}
 	}
 	
 	public void rear() {
-		System.out.println("Rear: " + arr[rear]);
+		if(!isEmpty()) {
+			System.out.println("Front: " + arr[rear-1]);
+		}
+		else {
+			System.out.println("Queue Empty so no rear");
+		}
 	}
 	
 	public void show() {
 		if(!isEmpty()) {
+			System.out.print("Queue: ");
 			for (int i = front; i < rear; i++) {
 				System.out.print(arr[i] + " ");
 			}
+			System.out.println();
 		}
 		else {
 			System.out.println("Queue Empty");
-		}
-		
-	}
-	
-	
+		}	
+	}	
 }
