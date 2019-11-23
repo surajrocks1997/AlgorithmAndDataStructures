@@ -23,6 +23,7 @@ public class MaximumOfSubArraysOfSizeK {
 			queue.enqueue(arr[i], arr.length);
 		}
 		scan.close();
+		
 	}
 }
 
