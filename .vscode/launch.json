@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.LinkedList.Test",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - OperationsOnMiddleElement",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.LinkedList.OperationsOnMiddleElement",
+            "projectName": "AlgorithmAndDataStructures"
+        }
+    ]
+}

@@ -3,7 +3,7 @@ package com.DataStructure.List.ArrayList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class main {
+public class main1 {
 
 	public static void main(String[] args) {
 		
@@ -36,7 +36,7 @@ public class main {
 		employeeList.forEach(employee -> System.out.println(employee));
 		
 		//stores all the elements of the list in the array
-		Employee[] employeeArr = employeeList.toArray(new Employee[employeeList.size()]);
+		//Employee[] employeeArr = employeeList.toArray(new Employee[employeeList.size()]);
 		
 		//removes the employee at specific index
 		employeeList.remove(2);
