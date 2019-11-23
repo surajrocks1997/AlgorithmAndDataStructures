@@ -11,7 +11,6 @@ public class FirstCircularTourRunner {
 
 	public static void main(String[] args) {
 	
-		FirstCircularTourThatVisitsAllPetrolPumps obj = new FirstCircularTourThatVisitsAllPetrolPumps();
 		PetrolPump[] arr = {
 				new PetrolPump(4, 6),
 				new PetrolPump(6, 5),
