@@ -1,4 +1,4 @@
-package com.DataStructure.Stack.LinkedList;
+package com.DataStructure.Stack.Array;
 
 public class TwoStackInArray {
 

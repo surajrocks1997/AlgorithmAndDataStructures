@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SortStackUsingRecursion",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.Array.SortStackUsingRecursion",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.Array.Test",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TwoStackInArray",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.Array.TwoStackInArray",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GenerateBinaryNumber",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Queue.Array.GenerateBinaryNumber",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test",
             "request": "launch",
             "mainClass": "com.DataStructure.Stack.LinkedList.Test",
