@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - KStacksInSingleArray",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.Array.KStacksInSingleArray",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SortStackUsingRecursion",
             "request": "launch",
             "mainClass": "com.DataStructure.Stack.Array.SortStackUsingRecursion",
