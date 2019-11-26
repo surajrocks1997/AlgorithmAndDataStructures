@@ -1,9 +1,9 @@
 package com.DataStructure.Stack.Array;
 
-public class TwoStackInArray {
+public class TwoStacksInAnArray {
 
 	public static void main(String[] args) {
-		implementation stacks = new implementation(5);
+		TwoStackImplementation stacks = new TwoStackImplementation(5);
 		stacks.push1(1);
 		stacks.push2(2);
 		stacks.push1(3);
@@ -20,12 +20,12 @@ public class TwoStackInArray {
 	}
 }
 
-class implementation{
+class TwoStackImplementation{
 	int[] arr;
 	int top1, top2;
 	int size;
 
-	public implementation(int i) {
+	public TwoStackImplementation(int i) {
 		arr = new int[i];
 		size = i;
 		top1 = -1;
@@ -74,4 +74,5 @@ class implementation{
 			System.out.println(x + " : Popped");
 		}
 	}
+
 }

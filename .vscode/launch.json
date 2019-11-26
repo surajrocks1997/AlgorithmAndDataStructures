@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CircularLinkedList",
+            "request": "launch",
+            "mainClass": "com.DataStructure.LinkedList.Singly.CircularLinkedList",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TypesOfTraversal",
+            "request": "launch",
+            "mainClass": "com.DataStructure.BinaryTree.TypesOfTraversal",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - KStacksInSingleArray",
             "request": "launch",
             "mainClass": "com.DataStructure.Stack.Array.KStacksInSingleArray",
