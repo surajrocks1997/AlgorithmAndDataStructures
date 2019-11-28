@@ -1,4 +1,8 @@
 package com.DataStructure.BinaryTree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 /*
 There are 2 types of Traversal
     1.  Depth First Traversal
@@ -29,6 +33,9 @@ public class TypesOfTraversal {
         System.out.print("PostOrder: ");
         print.printPostOrder();
         
+        System.out.println();
+        System.out.print("Level Order / Breadth First : ");
+        print.printLevelOrder();
     }
 }
 
@@ -38,12 +45,12 @@ class Print extends BinaryTree {
         Inorder(root);
     }
 
-    private void Inorder(Node node) {
+	private void Inorder(Node node) {
         if (node == null) {
             return;
         }
         Inorder(node.left);
-        System.out.print(node.key + " ");
+        System.out.print(node.data + " ");
         Inorder(node.right);
     }
 
@@ -55,7 +62,7 @@ class Print extends BinaryTree {
         if(node == null){
             return;
         }
-        System.out.print(node.key + " ");
+        System.out.print(node.data + " ");
         Preorder(node.left);
         Preorder(node.right);
     }
@@ -70,6 +77,29 @@ class Print extends BinaryTree {
         }
         PostOrder(node.left);
         PostOrder(node.right);
-        System.out.print(node.key + " ");
+        System.out.print(node.data + " ");
     }
+    
+
+    public void printLevelOrder() {
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.add(root);
+		while(!queue.isEmpty()) {
+			Node tempNode  = queue.poll();
+			System.out.print(tempNode.data + " ");
+			
+			if(tempNode.left != null) {
+				queue.add(tempNode.left);
+			}
+			
+			if(tempNode.right != null) {
+				queue.add(tempNode.right);
+			}
+			
+			
+		}
+		
+		
+		
+	}
 }

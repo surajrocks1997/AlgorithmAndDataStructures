@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TwoStacksInAnArray",
+            "request": "launch",
+            "mainClass": "com.DataStructure.Stack.Array.TwoStacksInAnArray",
+            "projectName": "AlgorithmAndDataStructures"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CircularLinkedList",
             "request": "launch",
             "mainClass": "com.DataStructure.LinkedList.Singly.CircularLinkedList",
