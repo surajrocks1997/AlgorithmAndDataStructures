@@ -27,8 +27,11 @@ class CalDiam1 extends BinaryTree{
 			return 0;
 		}
 		Minimum min = new Minimum();
+		
+		@SuppressWarnings("unused")
 		int treeheight = height(root, min);
-		System.out.println("Tree height: " + treeheight);
+		//System.out.println("Tree height: " + treeheight);
+		
 		return min.minVal;
 	}
 

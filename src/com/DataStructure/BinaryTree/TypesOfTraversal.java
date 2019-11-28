@@ -9,7 +9,7 @@ There are 2 types of Traversal
         a.  Inorder
         b.  Preorder
         c.  Postorder
-    2.  Breadth First Traversal
+    2.  Breadth First Traversal or Level Order Traversal
 */
 public class TypesOfTraversal {
 
