@@ -12,6 +12,7 @@ public class InorderTreeTraversalWithoutRecursion {
 		cal.root.left.left = new Node(4);
 		cal.root.left.right = new Node(5);
 		
+		System.out.print("Inorder: ");
 		cal.printInorderWithoutRecursion();
 	}
 
@@ -37,7 +38,6 @@ class InorderWithoutRecursion extends BinaryTree{
 				stack.push(current);
 				current = current.left;
 			}
-			
 			current = stack.pop();
 			System.out.print(current.data + " ");
 			current = current.right;
