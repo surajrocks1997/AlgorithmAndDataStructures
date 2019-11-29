@@ -20,13 +20,13 @@ public class InorderTreeTraversalWithoutRecursionAndStack {
 class InorderWithoutRecursionAndStack extends BinaryTree{
 
 	Node root;
+	Node prev, current;
+	
 	public void Inorder() {
-		Node current, prev;
-		current = root;
-		
 		if(root == null) {
 			return;
 		}
+		current = root;
 		while(current != null) {
 			if(current.left == null) {
 				System.out.print(current.data + " ");
@@ -34,11 +34,21 @@ class InorderWithoutRecursionAndStack extends BinaryTree{
 			}
 			else {
 				prev = current.left;
-				current = current.left;
+				 while(prev.right != null && prev.right != current) {
+					 prev = prev.right;
+				 }
+				 
+				 if(prev.right == null) {
+					 prev.right = current;
+					 current = current.left;
+				 }
+				 else {
+					 prev.right = null;
+					 System.out.print(current.data + " ");
+					 current = current.right;
+				 }
 			}
-			
 		}
-		
 	}
 	
 }
