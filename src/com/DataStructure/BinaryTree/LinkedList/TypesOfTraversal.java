@@ -6,9 +6,9 @@ import java.util.Queue;
 /*
 There are 2 types of Traversal
     1.  Depth First Traversal
-        a.  Inorder
-        b.  Preorder
-        c.  Postorder
+        a.  Inorder (Left - Root - Right)
+        b.  Preorder (Root - Left - Right)
+        c.  Postorder (Left - Right - Root)
     2.  Breadth First Traversal or Level Order Traversal
 */
 public class TypesOfTraversal {
