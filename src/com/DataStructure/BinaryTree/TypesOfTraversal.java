@@ -45,7 +45,7 @@ class Print extends BinaryTree {
         Inorder(root);
     }
 
-	private void Inorder(Node node) {
+	public void Inorder(Node node) {
         if (node == null) {
             return;
         }

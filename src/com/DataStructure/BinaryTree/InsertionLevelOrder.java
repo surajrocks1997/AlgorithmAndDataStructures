@@ -6,7 +6,7 @@ import java.util.Queue;
 
 
 
-public class LevelOrderInsertion {
+public class InsertionLevelOrder {
 
 	public static void main(String[] args) {
 		InsertElementLevelOrder tree = new InsertElementLevelOrder();
