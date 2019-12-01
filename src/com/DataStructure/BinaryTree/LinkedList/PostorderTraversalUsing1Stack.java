@@ -15,49 +15,39 @@ public class PostorderTraversalUsing1Stack {
         cal.root.right.right = new Node(7); 
         
         System.out.print("Postorder: ");
-        cal.postorder();
+        cal.postOrder();
         
         }
 }
 class Stack1PostorderTraversal extends BinaryTree{
 	Node root;
 
-	public void postorder() {
-		if(root == null){
+	public void postOrder() {
+		
+		if(root == null) {
 			return;
 		}
-		
-		Node current = root;
-		
 		Stack<Node> stack = new Stack<>();
-		while(stack.size()>0 || current != null) {
+		Node current = root;
+		while(true) {
 			while(current != null) {
-				if(current.right != null) {
-					stack.push(current.right);
-				}
+				stack.push(current);
 				stack.push(current);
 				current = current.left;
 			}
-			while(stack.size() > 0 && current == null) {
-				current = stack.pop();
-				if(stack.isEmpty()) {
-					System.out.print(current.data);
-					current = null;
-				}
-				else if(current.right != null && current.right == stack.peek()) {
-					Node right = stack.pop();
-					stack.push(current);
-					current = right;
-				}
-				else {
-					System.out.print(current.data + " ");
-					current = null;
-				}
+			if(stack.isEmpty()) {
+				return;
+			}
+			current = stack.pop();
+			
+			if(!stack.isEmpty() && stack.peek() == current) {
+				current = current.right;
+			}
+			else {
+				System.out.print(current.data + " ");
+				current = null;
 			}
 		}
-		
-		
-		
 	}
 	
 }
