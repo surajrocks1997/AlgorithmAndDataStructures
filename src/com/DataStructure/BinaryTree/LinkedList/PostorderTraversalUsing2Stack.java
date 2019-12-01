@@ -2,10 +2,10 @@ package com.DataStructure.BinaryTree.LinkedList;
 
 import java.util.Stack;
 
-public class PostorderTraversalUsingStack {
+public class PostorderTraversalUsing2Stack {
 
 	public static void main(String[] args) {
-		StackPostorderTraversal cal = new StackPostorderTraversal();
+		Stack2PostorderTraversal cal = new Stack2PostorderTraversal();
 		cal.root = new Node(1);
 		cal.root.left = new Node(2);
 		cal.root.right = new Node(3);
@@ -20,7 +20,7 @@ public class PostorderTraversalUsingStack {
 
 }
 
-class StackPostorderTraversal extends BinaryTree{
+class Stack2PostorderTraversal extends BinaryTree{
 
 	Node root;
 	public void postOrder() {
