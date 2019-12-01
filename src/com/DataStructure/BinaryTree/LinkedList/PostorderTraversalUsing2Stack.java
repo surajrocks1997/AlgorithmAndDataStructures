@@ -24,27 +24,26 @@ class Stack2PostorderTraversal extends BinaryTree{
 
 	Node root;
 	public void postOrder() {
-		if(root == null) {
-			return;
-		}
-		Stack<Node> stack1 = new Stack<>();
-		Stack<Node> stack2 = new Stack<>();
-		
+		Stack<Node> stack = new Stack<>();
 		Node current = root;
-		stack1.push(current);
-		while(!stack1.isEmpty()) {
-			current = stack1.peek();
-			stack2.push(stack1.pop());
-			if(current.left != null) {
-				stack1.push(current.left);
+		while(true) {
+			while(current != null) {
+				stack.push(current);
+				stack.push(current);
+				current = current.left;
 			}
-			if(current.right != null) {
-				stack1.push(current.right);
+			if(stack.isEmpty()) {
+				return;
 			}
-		}
-		while(!stack2.isEmpty()) {
-			Node print = stack2.pop();
-			System.out.print(print.data + " ");
+			current = stack.pop();
+			
+			if(!stack.isEmpty() && stack.peek() == current) {
+				current = current.right;
+			}
+			else {
+				System.out.print(current.data + " ");
+				current = null;
+			}
 		}
 	}
 	
