@@ -2,7 +2,7 @@ package com.DataStructure.BinaryTree.LinkedList;
 
 import java.util.Stack;
 
-public class InorderTreeTraversalWithoutRecursion {
+public class InorderTreeTraversalUsingStack {
 
 	public static void main(String[] args) {
 		InorderWithoutRecursion cal = new InorderWithoutRecursion();
