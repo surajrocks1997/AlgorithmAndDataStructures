@@ -5,7 +5,7 @@ import java.util.Stack;
 public class InorderTreeTraversalUsingStack {
 
 	public static void main(String[] args) {
-		InorderWithoutRecursion cal = new InorderWithoutRecursion();
+		StackInorderTraversal cal = new StackInorderTraversal();
 		cal.root = new Node(1);
 		cal.root.left = new Node(2);
 		cal.root.right = new Node(3);
@@ -18,7 +18,7 @@ public class InorderTreeTraversalUsingStack {
 
 }
 
-class InorderWithoutRecursion extends BinaryTree{
+class StackInorderTraversal extends BinaryTree{
 	Node root;
 	
 	public void printInorderWithoutRecursion() {
