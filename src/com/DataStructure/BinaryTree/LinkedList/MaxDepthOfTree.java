@@ -10,7 +10,7 @@ public class MaxDepthOfTree {
 		Depth.root.left.left = new Node(4);
 		Depth.root.left.right = new Node(5);
 		
-		System.out.println("Max Depth: ");
+		System.out.print("Max Depth: ");
 		int depth = Depth.maxDepth();
 		System.out.println(depth);
 
@@ -39,6 +39,5 @@ class MaxDepth extends BinaryTree{
 		else {
 			return rdepth+1;
 		}
-	}
-	
+	}	
 }
