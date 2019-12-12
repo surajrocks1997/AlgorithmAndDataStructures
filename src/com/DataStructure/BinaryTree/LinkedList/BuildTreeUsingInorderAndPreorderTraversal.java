@@ -25,6 +25,7 @@ public class BuildTreeUsingInorderAndPreorderTraversal{
 		
 		int length = in.length;
 		Node root = tree.build(in, pre, 0, length-1);
+		System.out.println(root.data + " ");
 		
 	}
 }
