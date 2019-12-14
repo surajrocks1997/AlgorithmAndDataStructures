@@ -4,7 +4,7 @@ public class InorderSuccessorAndPredecessorofGivenKey {
 
 	public static void main(String[] args) {
 		InorderSuccessorAndPredecessor tree = new InorderSuccessorAndPredecessor();
-		int key = 65;
+		int key = 50;
 		tree.insert(50);
 		tree.insert(30);
 		tree.insert(20);
@@ -30,6 +30,7 @@ class InorderSuccessorAndPredecessor extends BinarySearchTree{
 
 	public void InorderPredAndSuc(Node root, Node predecessor, Node successor, int key) {
 		if(root == null) {
+			print(successor, predecessor);
 			return;
 		}
 		
@@ -49,19 +50,7 @@ class InorderSuccessorAndPredecessor extends BinarySearchTree{
 				}
 				successor = temp;
 			}
-			
-			if(successor != null) {
-				System.out.println("Successor: " + successor.data);
-			}
-			else {
-				System.out.println("No Successor");
-			}
-			if(predecessor != null) {
-				System.out.println("Predecessor: " + predecessor.data);
-			}
-			else {
-				System.out.println("No Predecessor");
-			}
+			print(successor, predecessor);
 		}
 		
 		else if(root.data > key) {
@@ -75,6 +64,22 @@ class InorderSuccessorAndPredecessor extends BinarySearchTree{
 			InorderPredAndSuc(root.right, predecessor, successor, key);
 
 		}
+	}
+
+	private void print(Node successor, Node predecessor) {
+		if(successor != null) {
+			System.out.println("Successor: " + successor.data);
+		}
+		else {
+			System.out.println("No Successor");
+		}
+		if(predecessor != null) {
+			System.out.println("Predecessor: " + predecessor.data);
+		}
+		else {
+			System.out.println("No Predecessor");
+		}
+		
 	}
 	
 }
