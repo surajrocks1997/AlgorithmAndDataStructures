@@ -79,6 +79,21 @@ public class BinarySearchTree {
 		return min;
 	}
 	
+	public void minValue() {
+		minValue(root);
+	}
+
+	private void minValue(Node node) {
+		if(node == null) {
+			return;
+		}
+		
+		while(node.left != null) {
+			node = node.left;
+		}
+		System.out.println("Minimum Value: " + node.data);
+		
+	}
 	
 	
 }

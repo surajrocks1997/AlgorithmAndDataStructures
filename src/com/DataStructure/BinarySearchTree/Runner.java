@@ -16,8 +16,10 @@ public class Runner {
 		tree.inorder();
 		
 		tree.deleteKey(20);
+		tree.inorder();
 		
 		tree.deleteKey(30);
+		tree.inorder();
 		
 		tree.deleteKey(50);
 		
@@ -25,7 +27,9 @@ public class Runner {
 		System.out.print("Inorder: ");
 		tree.inorder();
 		
-		//wrong code
+		System.out.println();
+		tree.minValue();
+		
 	}
 
 }
