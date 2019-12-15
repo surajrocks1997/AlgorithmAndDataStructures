@@ -16,9 +16,11 @@ public class Runner {
 		tree.inorder();
 		
 		tree.deleteKey(20);
+		System.out.println();
 		tree.inorder();
 		
 		tree.deleteKey(30);
+		System.out.println();
 		tree.inorder();
 		
 		tree.deleteKey(50);
