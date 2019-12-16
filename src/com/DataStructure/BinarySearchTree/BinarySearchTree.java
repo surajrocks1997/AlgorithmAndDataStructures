@@ -32,7 +32,7 @@ public class BinarySearchTree {
 		inorder(root);
 	}
 
-	private void inorder(Node root) {
+	public void inorder(Node root) {
 		if(root != null) {
 			inorder(root.left);
 			System.out.print(root.data + " ");
