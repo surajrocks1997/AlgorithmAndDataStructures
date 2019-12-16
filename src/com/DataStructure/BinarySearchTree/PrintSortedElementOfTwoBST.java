@@ -8,13 +8,14 @@ public class PrintSortedElementOfTwoBST {
 		BinarySearchTree tree1 = new BinarySearchTree();
 		BinarySearchTree tree2 = new BinarySearchTree();
 
-		tree1.insert(3);
+		tree1.insert(8);
+		tree1.insert(2);
+		tree1.insert(10);
 		tree1.insert(1);
-		tree1.insert(5);
 
-		tree2.insert(4);
-		tree2.insert(2);
-		tree2.insert(6);
+		tree2.insert(5);
+		tree2.insert(3);
+		tree2.insert(0);
 
 		printSortedElements(tree1.root, tree2.root);
 	}
@@ -57,8 +58,8 @@ public class PrintSortedElementOfTwoBST {
 			else if(list2.isEmpty()){
 				for (Node node : list1) {
 					System.out.print(node.data + " ");
-					break;
 				}
+				break;
 			}
 		}
 		
