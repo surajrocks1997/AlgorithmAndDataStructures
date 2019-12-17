@@ -143,4 +143,8 @@ public class LinkedList {
 		next.prev = null;
 		head = next;
 	}
+	
+	public Node getHead() {
+		return head;
+	}
 }
