@@ -47,6 +47,30 @@ public class Graph {
 		}
 	}
 	
+	public void DFS() {
+		boolean[] visited = new boolean[V];
+		
+		for (int i = 0; i < V; i++) {
+			if(visited[i] == false) {
+				DFSUtil(i, visited);
+			}
+		}
+	}
+	
+	private void DFSUtil(int i, boolean[] visited) {
+		visited[i] = true;
+		System.out.print(i + " ");
+		
+		Iterator<Integer> iter = adjListArray[i].listIterator();
+		while(iter.hasNext()) {
+			int n = iter.next();
+			if(!visited[n]) {
+				DFSUtil(n, visited);
+			}
+		}
+		
+	}
+
 	public void printGraph(Graph graph) {
 		for (int i = 0; i < graph.V; i++) {
 			System.out.println("Adjacency list of Vertex " + i);

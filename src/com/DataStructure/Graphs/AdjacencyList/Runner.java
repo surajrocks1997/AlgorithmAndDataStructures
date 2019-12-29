@@ -17,6 +17,9 @@ public class Runner {
 		
 		System.out.println("BFS: ");
 		graph.BFS(4);
+		System.out.println();
+		System.out.println("DFS: ");
+		graph.DFS();
 
 	}
 
