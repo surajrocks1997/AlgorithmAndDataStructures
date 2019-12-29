@@ -1,5 +1,6 @@
 package com.DataStructure.Graphs.AdjacencyList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Graph {
@@ -20,6 +21,30 @@ public class Graph {
 		graph.adjListArray[src].add(dst);
 		
 		graph.adjListArray[dst].add(src);	//since it is undirected graph
+	}
+	
+	public void BFS(int s) {
+		boolean[] visited = new boolean[V];
+		
+		LinkedList<Integer> queue = new LinkedList<>();
+		
+		visited[s] = true;
+		queue.add(s);
+		while(queue.size() != 0) {
+			s = queue.poll();
+			System.out.print(s + " ");
+			
+			Iterator<Integer> i = adjListArray[s].listIterator();
+			
+			while(i.hasNext()) {
+				int n = i.next();
+				
+				if(!visited[n]) {
+					visited[n] = true;
+					queue.add(n);
+				}
+			}
+		}
 	}
 	
 	public void printGraph(Graph graph) {

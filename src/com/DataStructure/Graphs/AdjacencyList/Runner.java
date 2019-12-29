@@ -14,6 +14,9 @@ public class Runner {
 		graph.addEdge(graph, 3, 4); 
 		
 		graph.printGraph(graph);
+		
+		System.out.println("BFS: ");
+		graph.BFS(4);
 
 	}
 
