@@ -2,6 +2,7 @@ package com.DataStructure.Graphs.AdjacencyList;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Graph {
 
@@ -26,7 +27,7 @@ public class Graph {
 	public void addEdge(Graph graph, int src, int dst) {
 		graph.adjListArray[src].add(dst);
 		
-		graph.adjListArray[dst].add(src);	//since it is undirected graph
+//		graph.adjListArray[dst].add(src);	//since it is undirected graph
 	}
 	
 	public void BFS(int s) {
@@ -74,7 +75,38 @@ public class Graph {
 				DFSUtil(n, visited);
 			}
 		}
+	}
+	
+	public boolean isCyclic() {
+		boolean[] visited = new boolean[V];
+		boolean[] recStack = new boolean[V];
 		
+		for (int i = 0; i < V; i++) {
+			if(isCyclicUtil(i, visited, recStack)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean isCyclicUtil(int i, boolean[] visited, boolean[] recStack) {
+		if(recStack[i]) {
+			return true;
+		}
+		if(visited[i]) {
+			return false;
+		}
+		
+		visited[i] = true;
+		recStack[i] = true;
+		
+		for(Integer x: adjListArray[i]) {
+			if(isCyclicUtil(x, visited, recStack)) {
+				return true;
+			}
+		}
+		recStack[i] = false;
+		return false;
 	}
 
 	public void printGraph(Graph graph) {
