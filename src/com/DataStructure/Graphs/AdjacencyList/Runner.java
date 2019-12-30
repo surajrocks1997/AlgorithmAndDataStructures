@@ -20,6 +20,9 @@ public class Runner {
 		System.out.println();
 		System.out.println("DFS: ");
 		graph.DFS();
+		
+		System.out.println("ARRAY: ");
+		graph.printArray();
 
 	}
 

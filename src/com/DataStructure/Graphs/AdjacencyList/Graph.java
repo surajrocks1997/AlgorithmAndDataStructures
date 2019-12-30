@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class Graph {
 
 	int V;
-	LinkedList<Integer> adjListArray[];
+	LinkedList<Integer>[] adjListArray;
 	
 	public Graph(int V) {
 		this.V = V;
@@ -14,6 +14,12 @@ public class Graph {
 		
 		for (int i = 0; i < V; i++) {
 			adjListArray[i] = new LinkedList<>();
+		}
+	}
+	
+	public void printArray() {
+		for (int i = 0; i < adjListArray.length; i++) {
+			System.out.print(adjListArray[i]);
 		}
 	}
 	
