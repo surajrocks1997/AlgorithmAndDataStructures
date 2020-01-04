@@ -14,6 +14,10 @@ public class Runner {
 		//list.deleteAt(2);
 		
 		list.show();
+		list.reverse();
+		list.show();
+		list.reverse1();
+		list.show();
 	}
 
 }
