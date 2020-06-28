@@ -31,6 +31,8 @@ public class FindingSubsetArray {
 			}
 		}
 		
+		System.out.println("Hashset: " + hset);
+		
 		return true;
 	}
 
