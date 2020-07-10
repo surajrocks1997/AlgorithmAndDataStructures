@@ -1,6 +1,8 @@
 package com.DataStructure.LinkedList.Singly;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class LinkedList {
 
@@ -259,6 +261,23 @@ public void mergeList(LinkedList listA, LinkedList listB) {
 		System.out.println("After last: " + last.next.data);
 		System.out.println("Loop has been successfully created.");
 		
+	}
+//	Using HashSet
+	public Boolean loopDetection1() {
+		
+		if(head == null) {
+			return false;
+		}
+		Node current = head;
+		Set<String> set = new HashSet<String>();
+		while(current.next != null) {
+			if(set.contains(current.toString())) {
+				return true;
+			}
+			set.add(current.toString());
+			current = current.next;
+		}
+		return false;
 	}
 
 	public Boolean loopDetection() {
