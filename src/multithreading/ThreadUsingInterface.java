@@ -15,6 +15,15 @@ public class ThreadUsingInterface {
 		t1.start();
 		Thread.sleep(10);
 		t2.start();
+		
+		System.out.println(t1.isAlive());
+		
+		t1.join();
+		t2.join();
+		
+		System.out.println(t1.isAlive());
+		
+		System.out.println("Bye");
 	}
 }
 
