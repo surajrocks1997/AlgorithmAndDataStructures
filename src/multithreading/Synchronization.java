@@ -7,14 +7,14 @@ public class Synchronization {
 //		c.increment();
 //		System.out.println(c.count);
 
-		Thread t1 = new Thread(new Runnable() {
+		
+//		Two different ways to use the Thread. 
+//		One using lambda expression
+//		Second using anonymous inner class
+		Thread t1 = new Thread(() -> {
 
-			@Override
-			public void run() {
-
-				for (int i = 0; i < 1000; i++) {
-					c.increment();
-				}
+			for (int i = 0; i < 1000; i++) {
+				c.increment();
 			}
 		});
 
@@ -31,7 +31,7 @@ public class Synchronization {
 
 		t1.start();
 		t2.start();
-		
+
 		t1.join();
 		t2.join();
 
